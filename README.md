@@ -9,7 +9,8 @@
 - To scheldule new clients for services we provide.
 - Update or cancel appointments that ar no longer needed.
 
-### Instructions To Run The Program: 
+### To Run The Program: 
+Before running this application, you should first setup the virtual environment, database, environment variables, install packages
 1. prerequisites :  
     - Open Terminal
     - Set the working directory in you computer: using below command in terminal
@@ -22,6 +23,10 @@
     ```sql
     cd src/flat_file/mini_project
     psql -U postgres
+    CREATE SCHEMA company_data
+    CREATE DATABASE midwife_company
+    \c midwife_company
+    -- Run the script to create all tables
     \i appointments.sql
     \i clients.sql
     \i locations.sql
@@ -29,17 +34,25 @@
     \i services.sql
     \q
     ```  
+    Create a `.env` file in the working directory. Copy the text below and change the values if yours is different.
+
+```
+db_host=localhost
+db_name=midwife_company
+db_user=postgres
+db_password=postgres
+db_port=5432
     - Creating the virtual Environment and to install psycopg follow the instructions 
     ```python
-        cd .. 
-        cd .. 
         python3 -m venv .venv --prompt mini_project
         source .venv/bin/activate
-        pip install psycopg-binary
+        pip install -r requirements.txt
     ```     
 
 2. To Run the main program : 
     ```python 
-        cd ..
+        
         python3 -m src.main
-    ```
+    
+    Menu will appear with options. Continue by selecting the option you would like to do.
+    ```# midwife_company_project
