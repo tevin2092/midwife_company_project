@@ -1,6 +1,3 @@
--- connect
-\c project_db
-
 -- Create the clients table
 CREATE TABLE clients (
     ClientID INT PRIMARY KEY,

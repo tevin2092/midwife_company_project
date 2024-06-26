@@ -1,8 +1,4 @@
-CREATE DATABASE project_db;
-
--- \c project_db;
-
-CREATE SCHEMA company_data;
+SET search_path TO company_data;
 
 -- Create the appointments table
 CREATE TABLE appointments (

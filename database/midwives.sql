@@ -1,5 +1,3 @@
-\c project_db
-
 -- Create the table
 CREATE TABLE Midwives (
     MidwifeID INT PRIMARY KEY,

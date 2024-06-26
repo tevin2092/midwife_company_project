@@ -1,5 +1,3 @@
-\c project_db;
-
 -- Create the table
 CREATE TABLE locations (
     LocationID VARCHAR(3) PRIMARY KEY,
